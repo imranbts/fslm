@@ -17,4 +17,32 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+/**
+ *
+ * Dashboard Routes
+ */
+Route::middleware(['auth','checkrole'])->group(function () {
+
+    Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+});
+
+Route::post('logout', 'Auth\LoginController@logout')->middleware('auth')->name('logout');
+
+
+/* Route::group(
+    [
+        'middleware' => ['auth','checkrole'],
+    ],
+    function () {
+
+        // dashboard
+
+        Route::get('/dashboard', function(){
+
+            return  redirect("/dashboard");
+
+        });
+
+    }
+); */
