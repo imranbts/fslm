@@ -21,7 +21,7 @@ Auth::routes();
  *
  * Dashboard Routes
  */
-Route::middleware(['auth','checkrole'])->group(function () {
+Route::middleware('auth')->group(function () {
 
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
