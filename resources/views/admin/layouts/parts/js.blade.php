@@ -19,6 +19,19 @@
     <script src="{{ asset('assets/admin/plugins/sparkline/jquery.sparkline.min.js') }}"></script>
     <!--Custom JavaScript -->
     <script src="{{ asset('assets/admin/js/custom.min.js') }}"></script>
+    <script src="{{ asset('assets/admin/plugins/switchery/dist/switchery.min.js') }}"></script>
+
+    <script>
+        jQuery(document).ready(function() {
+            // Switchery
+            var elems = Array.prototype.slice.call(document.querySelectorAll('.js-switch'));
+            $('.js-switch').each(function() {
+                new Switchery($(this)[0], $(this).data());
+            });
+
+        });
+    </script>
+
     <!-- ============================================================== -->
     <!-- Style switcher -->
     <!-- ============================================================== -->

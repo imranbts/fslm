@@ -1,6 +1,8 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="{{ asset('assets/admin/plugins/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+    <!-- Packages -->
+    <link href="{{ asset('assets/admin/plugins/switchery/dist/switchery.min.css') }}" rel="stylesheet" />
     <!-- Custom CSS -->
     <link href="{{ asset('assets/admin/css/style.css') }}" rel="stylesheet">
     <!-- You can change the theme colors from here -->

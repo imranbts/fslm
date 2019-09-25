@@ -25,6 +25,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
 
+    Route::get('/permission-create', 'PermissionController@create')->name('permission-create');
+
 });
 
 Route::post('logout', 'Auth\LoginController@logout')->middleware('auth')->name('logout');
