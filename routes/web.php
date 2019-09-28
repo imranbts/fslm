@@ -27,6 +27,12 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/permission-create', 'PermissionController@create')->name('permission-create');
 
+    Route::get('/manage-users', 'UserController@index')->name('manage-users');
+
+    Route::post('/manage-users/store', 'UserController@store')->name('manage-users-store');
+
+    Route::delete('/manage-users/destroy/{id}', 'UserController@destroy')->name('manage-users-destroy');
+
 });
 
 Route::post('logout', 'Auth\LoginController@logout')->middleware('auth')->name('logout');

@@ -25,12 +25,12 @@
                     <ul id="sidebarnav">
                         <li class="nav-small-cap">PERSONAL</li>
                         <li>
-                            <a href="#" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard</span></a>
+                        <a href="{{ url('dashboard') }}" aria-expanded="false"><i class="mdi mdi-gauge"></i><span class="hide-menu">Dashboard</span></a>
                         </li>
                         <li>
                             <a class="has-arrow " href="#" aria-expanded="false"><i class="mdi mdi-account"></i><span class="hide-menu">Users</span></a>
                             <ul aria-expanded="false" class="collapse">
-                                <li><a href="#">Manage Users</a></li>
+                            <li><a href="{{ url('manage-users') }}">Manage Users</a></li>
                             </ul>
                         </li>
                         <li>
